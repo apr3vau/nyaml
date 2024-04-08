@@ -19,17 +19,3 @@
 	       (:file "float")
 	       (:file "scalar")
                (:file "stringify")))
-
-
-(asdf:defsystem #:nyaml/test
-  :description "Tests for NYAML"
-  :author "Jason Miller <aidenn0@geocities.com>"
-  :license "MIT"
-  :depends-on (#:esrap #:alexandria #:split-sequence #:nyaml
-		       #:parachute #:yason)
-  :serial t
-  :components ((:module "test"
-		:components
-		((:file "test")
-		 #+(or)(:file "nyaml-reference")
-		 (:file "yaml-test-suite")))))
